@@ -602,7 +602,7 @@ $$
 
 The first expression gives the step size; the second gives the objective value after that step.
 
-![Line search principle](../assets/line-search.png)
+![Line search principle](./figures/line-search.png)
 
 
 ## 7. Exact line search: a worked example
