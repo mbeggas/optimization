@@ -64,7 +64,7 @@ $$
 The minimum is located at:
 
 $$
-x^*=(0,0),\qquad f(x^*)=0.
+x^{\*}=(0,0),\qquad f(x^\*)=0.
 $$
 
 Suppose we start at:
@@ -249,7 +249,7 @@ This leads to the concept of **line search**.
 In principle, we could solve:
 
 $$
-\alpha_k^*=
+\alpha_k^\*=
 \arg\min_{\alpha\geq 0}
 f(x_k+\alpha d_k).
 $$
@@ -292,7 +292,7 @@ $$
 
 where $f:\mathbb{R}^n\rightarrow\mathbb{R}$ is a differentiable objective function.
 
-Our goal is to find a point $x^*$ that minimizes $f$.
+Our goal is to find a point $x^\*$ that minimizes $f$.
 
 For complicated functions, it may be difficult or impossible to solve the optimization problem analytically. Instead, we construct a sequence of points:
 
@@ -376,7 +376,7 @@ $$
 Equality occurs when $d$ points in the direction opposite to the gradient:
 
 $$
-\boxed{d^*=-\frac{\nabla f(x)}{\|\nabla f(x)\|}}.
+\boxed{d^\*=-\frac{\nabla f(x)}{\|\nabla f(x)\|}}.
 $$
 
 Thus, the negative gradient is the direction of steepest local decrease under the Euclidean norm.
@@ -399,7 +399,7 @@ $$
 f(x)=x^2,\qquad f'(x)=2x.
 $$
 
-The minimum is at $x^*=0$.
+The minimum is at $x^\*=0$.
 
 Suppose we start from $x_0=3$. Gradient descent gives
 
@@ -482,7 +482,7 @@ $$
 The global minimum is
 
 $$
-(x^*,y^*)=(0,0).
+(x^\*,y^\*)=(0,0).
 $$
 
 Start at
@@ -667,8 +667,7 @@ $$
 The next point is
 
 $$
-x_1=p+\alpha^*d
-=
+x_1=p+\alpha^*d =
 \begin{pmatrix}
 2\\\\
 1
