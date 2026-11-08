@@ -4,25 +4,25 @@
 
 **First derivative = slope.**
 
-$$
+```math
 f'(x)=\lim_{\Delta x\to0}\frac{\Delta f}{\Delta x}
-$$
+```
 
 It is the rate at which $f$ changes per unit of $x$. Its sign tells you whether $f$ rises or falls.
 
 **First differential.** For a chosen displacement $dx$,
 
-$$
+```math
 df=f'(x)\,dx .
-$$
+```
 
 Read it as "slope × displacement". $df$ is exactly linear in $dx$ and has no second-order part. The notation $\frac{df}{dx}$ is the coefficient linking the two.
 
 **Second derivative = rate of change of the slope.**
 
-$$
+```math
 f''(x)=\frac{d}{dx}\big(f'(x)\big)
-$$
+```
 
 - $f''>0$: the slope increases as you move right (the curve bends upward).
 - $f''<0$: the slope decreases (the curve bends downward).
@@ -30,23 +30,23 @@ $$
 
 **Second differential.** Differentiate $df=f'(x)\,dx$ again, holding $dx$ fixed:
 
-$$
+```math
 d(f')=f''\,dx,\qquad d^2f=dx\,\big(f''dx\big)=f''(x)\,dx^2 .
-$$
+```
 
 It is the change in slope, $f''dx$, multiplied once more by the displacement $dx$. It has the same shape as the first order, "slope × displacement", but with the slope replaced by its change.
 
 **Combining the two orders.** The slope is not constant during the move. It starts at $f'$ and drifts linearly at rate $f''$:
 
-$$
+```math
 \text{slope at distance } s \;=\; f' + f''\,s .
-$$
+```
 
 The real change $\Delta f$ is the area under this slope line, a rectangle plus a triangle:
 
-$$
+```math
 \Delta f=\underbrace{f'\,dx}_{df:\ \text{rectangle}}+\underbrace{\tfrac12 f''\,dx^2}_{\tfrac12 d^2f:\ \text{triangle}}
-$$
+```
 
 - $df$ assumes the initial slope holds for the whole move.
 - $\tfrac12 d^2f$ corrects for the slope drift.
@@ -62,35 +62,35 @@ Equivalently, $\Delta f$ is the average slope times $dx$, and for a linearly dri
 
 Now $f(x,y)$ has one slope per direction:
 
-$$
+```math
 f_x=\frac{\partial f}{\partial x},\qquad f_y=\frac{\partial f}{\partial y}.
-$$
+```
 
 **First differential.** Each direction contributes slope × displacement, and the contributions add:
 
-$$
+```math
 df=f_x\,dx+f_y\,dy .
-$$
+```
 
 **Second differential, step by step.** Differentiate $df$ with $dx,dy$ held fixed. Only the slopes vary, and both can change with position:
 
-$$
+```math
 d^2f=df_x\,dx+df_y\,dy,
 \qquad
 df_x=f_{xx}\,dx+f_{xy}\,dy,\quad df_y=f_{yx}\,dx+f_{yy}\,dy .
-$$
+```
 
 Substituting gives four terms:
 
-$$
+```math
 d^2f=f_{xx}\,dx\,dx+f_{xy}\,dy\,dx+f_{yx}\,dx\,dy+f_{yy}\,dy\,dy .
-$$
+```
 
 Each term has the pattern (second derivative) × (displacement in one variable) × (displacement in another). With continuous second derivatives, $f_{xy}=f_{yx}$, so the mixed terms merge:
 
-$$
+```math
 d^2f=f_{xx}\,dx^2+2f_{xy}\,dx\,dy+f_{yy}\,dy^2 .
-$$
+```
 
 Reading the terms:
 
@@ -104,9 +104,9 @@ Reading the terms:
 - $\varphi''(0)=d^2f$ is the drift of that slope.
 - The rectangle plus triangle argument gives
 
-$$
+```math
 \Delta f\approx df+\tfrac12\,d^2f .
-$$
+```
 
 ---
 
@@ -116,11 +116,11 @@ Let $d\mathbf X=(dx,dy)^T$.
 
 **Gradient: the coefficients of $df$.**
 
-$$
+```math
 df=\begin{pmatrix}f_x&f_y\end{pmatrix}\begin{pmatrix}dx\\\\dy\end{pmatrix}=\nabla f^{\,T}d\mathbf X,
 \qquad
 \nabla f=\begin{pmatrix}f_x\\\\f_y\end{pmatrix}.
-$$
+```
 
 It turns a displacement into a change in $f$. It points in the direction of steepest increase, and its norm is the steepest slope.
 
@@ -128,41 +128,41 @@ It turns a displacement into a change in $f$. It points in the direction of stee
 
 *Step 1: differentiate each component.*
 
-$$
+```math
 d(\nabla f)=\begin{pmatrix}df_x\\\\ df_y\end{pmatrix}
 =\begin{pmatrix}f_{xx}\,dx+f_{xy}\,dy\\\\[2pt] f_{yx}\,dx+f_{yy}\,dy\end{pmatrix}.
-$$
+```
 
 *Step 2: recognise this column as a matrix times a vector.* Each row is a row of second derivatives dotted with $(dx,dy)^T$:
 
-$$
+```math
 \begin{pmatrix}f_{xx}\,dx+f_{xy}\,dy\\\\[2pt] f_{yx}\,dx+f_{yy}\,dy\end{pmatrix}
 =\begin{pmatrix}f_{xx}&f_{xy}\\\\ f_{yx}&f_{yy}\end{pmatrix}\begin{pmatrix}dx\\\\dy\end{pmatrix}.
-$$
+```
 
 *Step 3: name the matrix.* It is the Hessian:
 
-$$
+```math
 \boxed{d(\nabla f)=H\,d\mathbf X},\qquad H=\begin{pmatrix}f_{xx}&f_{xy}\\\\ f_{yx}&f_{yy}\end{pmatrix}.
-$$
+```
 
 The Hessian turns a displacement into a change in the gradient. This is a **vector** with one entry per slope. No row $d\mathbf X^T$ appears yet, because nothing has been multiplied by a displacement.
 
 **Second differential as a quadratic form.** The row $d\mathbf X^T$ enters when you differentiate the scalar $df=\nabla f^Td\mathbf X$. With $d\mathbf X$ held fixed, only $\nabla f$ varies:
 
-$$
+```math
 d^2f=d(\nabla f)^T\,d\mathbf X=(H\,d\mathbf X)^Td\mathbf X=d\mathbf X^T H^T d\mathbf X=d\mathbf X^T H\,d\mathbf X,
-$$
+```
 
 using $H=H^T$. Written out in the form of the earlier sum:
 
-$$
+```math
 d^2f=dx\,(f_{xx}dx+f_{xy}dy)+dy\,(f_{yx}dx+f_{yy}dy)
-$$
+```
 
-$$
+```math
 \boxed{d^2f=d\mathbf X^T H\,d\mathbf X}
-$$
+```
 
 Expanding returns the four-term sum, then $f_{xx}dx^2+2f_{xy}dxdy+f_{yy}dy^2$.
 
@@ -183,9 +183,9 @@ The scalar $d^2f$ is the change in the gradient projected onto the displacement.
 
 **What the matrix is bookkeeping.** Entry $H_{ij}=f_{x_ix_j}$ is the rate at which slope $i$ changes when you move in direction $j$. The quadratic form sums, over every pair $(i,j)$,
 
-$$
+```math
 \underbrace{dx_i}_{\text{displacement}}\times\underbrace{H_{ij}}_{\text{slope } i \text{ drift per unit } x_j}\times\underbrace{dx_j}_{\text{displacement}} .
-$$
+```
 
 The off-diagonal term appears twice, once as $(i,j)=(1,2)$ and once as $(2,1)$, which is where the factor 2 in $2f_{xy}\,dx\,dy$ comes from.
 
@@ -221,11 +221,11 @@ $f(x,y)=x^2+3xy$ at $(1,1)$ with $d\mathbf X=(0.1,0.2)^T$.
 - $\nabla f=(2x+3y,\;3x)=(5,3)$, so $df=0.5+0.6=1.1$.
 - $H=\begin{pmatrix}2&3\\\\3&0\end{pmatrix}$, so
 
-$$
+```math
 d(\nabla f)=H\,d\mathbf X=\begin{pmatrix}0.2+0.6\\\\0.3+0\end{pmatrix}=\begin{pmatrix}0.8\\\\0.3\end{pmatrix}\ (\text{vector}),
 \qquad
 d^2f=d\mathbf X^T(H\,d\mathbf X)=0.1(0.8)+0.2(0.3)=0.14\ (\text{scalar}).
-$$
+```
 
 - Direct check of the vector: $df_x=2(0.1)+3(0.2)=0.8$ and $df_y=3(0.1)=0.3$.
 - The expanded form agrees: $2(0.01)+2\cdot3(0.02)+0=0.14$.
