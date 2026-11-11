@@ -13,13 +13,13 @@
 Consider the nonlinear system
 
 $$
-F(x,y)=\begin{pmatrix}x^2+y^2-4\\xy-1\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}.
+F(x,y)=\begin{pmatrix}x^2+y^2-4\\\\xy-1\end{pmatrix}=\begin{pmatrix}0\\\\0\end{pmatrix}.
 $$
 
 Starting from
 
 $$
-\mathbf{x}_0=\begin{pmatrix}2\\0.8\end{pmatrix},
+\mathbf{x}_0=\begin{pmatrix}2\\\\0.8\end{pmatrix},
 $$
 
 answer the following questions.
@@ -44,13 +44,13 @@ Consider the quadratic objective
 $$
 f(\mathbf{x})=\frac12\mathbf{x}^TA\mathbf{x},
 \qquad
-A=\begin{pmatrix}5&4\\4&5\end{pmatrix},
+A=\begin{pmatrix}5&4\\\\4&5\end{pmatrix},
 $$
 
 with starting point
 
 $$
-\mathbf{x}_0=\begin{pmatrix}1\\0\end{pmatrix}.
+\mathbf{x}_0=\begin{pmatrix}1\\\\0\end{pmatrix}.
 $$
 
 ### Part A — Directional curvature and positive definiteness
@@ -129,9 +129,9 @@ Consider
 
 $$
 \begin{aligned}
-f_1(x,y)&=x^2+y^2,\\
-f_2(x,y)&=-x^2-y^2,\\
-f_3(x,y)&=x^2-y^2,\\
+f_1(x,y)&=x^2+y^2,\\\\
+f_2(x,y)&=-x^2-y^2,\\\\
+f_3(x,y)&=x^2-y^2,\\\\
 f_4(x,y)&=x^2+y^4.
 \end{aligned}
 $$
