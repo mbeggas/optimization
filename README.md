@@ -9,6 +9,6 @@
 [Lecture 04:](./gd-with-line-search.md)  Gradient Descent, Line Search, and Approximate Line-Search Methods  
      |_______ [TD Notebook](./Notebooks/line_search_exercises.ipynb) (or  [Colab Link](https://colab.research.google.com/drive/1y-pICSl1bYS2rhVwazd0pW2rnlRLj5Vt)) on colab  with explained solution of exercises (TD) on gradien descent and line search  
 
-[Lecture 05:](./5-lecture-newton-quasi-newton.md) Newton and Quasi-Newton Optimization Methods
+[Lecture 05:](./5-lecture-newton-quasi-newton.md) Newton and Quasi-Newton Optimization Methods  
      |_______ [TD Newton Method](./Exercises/newton_exercises.md) Exercises on Newton method
 
