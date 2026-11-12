@@ -36,7 +36,7 @@ We use a **rotated** ellipse, so that nothing can be explained away as "just res
 
 $$f(x)=\tfrac12x^TAx,\qquad A=\begin{pmatrix}50.5&49.5\\\\49.5&50.5\end{pmatrix}.$$
 
-Its eigenvalues are $1$ (eigenvector $(1,-1)/\sqrt2$) and $100$ (eigenvector $(1,1)/\sqrt2$), so $\kappa=100$. The minimizer is $x^{*}=0$ and the valley runs along $(1,-1)$.
+Its eigenvalues are $1$ (eigenvector $(1,-1)/\sqrt2$) and $100$ (eigenvector $(1,1)/\sqrt2$), so $\kappa=100$. The minimizer is $x^{\ast}=0$ and the valley runs along $(1,-1)$.
 
 ![GD zigzag](figures/fig00_gd_zigzag.png)
 
@@ -57,7 +57,7 @@ Its eigenvalues are $1$ (eigenvector $(1,-1)/\sqrt2$) and $100$ (eigenvector $(1
 - **Root finding:** given $F:\mathbb R^n\to\mathbb R^n$, find $x$ with $F(x)=0$.
 - **Optimization:** given $f:\mathbb R^n\to\mathbb R$, find $x$ minimizing $f$.
 
-They are different problems. A root of some function is not automatically a minimum or a maximum of anything. The two meet in one place: at a local minimizer of a differentiable $f$ we have $\nabla f(x^{*})=0$, which is a root-finding problem for $F=\nabla f$ (Part II).
+They are different problems. A root of some function is not automatically a minimum or a maximum of anything. The two meet in one place: at a local minimizer of a differentiable $f$ we have $\nabla f(x^{\ast})=0$, which is a root-finding problem for $F=\nabla f$ (Part II).
 
 ## 2. Newton–Raphson in one dimension
 
@@ -84,13 +84,13 @@ Newton replaces one hard nonlinear problem by a sequence of easy linear ones.
 
 The error is roughly **squared** at each step ($10^{-1}\to10^{-3}\to10^{-6}\to10^{-12}$): the number of correct digits doubles. This is *quadratic convergence*.
 
-<!-- **Why quadratic?** Let $e_k=x_k-x^{*}$, with $F(x^{*})=0$ and $F'(x^{*})\neq0$. Taylor's theorem with remainder gives
-$$0=F(x^{*})=F(x_k)-F'(x_k)e_k+\tfrac12F''(\xi_k)e_k^2 .$$
+<!-- **Why quadratic?** Let $e_k=x_k-x^{\ast}$, with $F(x^{\ast})=0$ and $F'(x^{\ast})\neq0$. Taylor's theorem with remainder gives
+$$0=F(x^{\ast})=F(x_k)-F'(x_k)e_k+\tfrac12F''(\xi_k)e_k^2 .$$
 Divide by $F'(x_k)$ and use $x_{k+1}=x_k-F(x_k)/F'(x_k)$:
 $$e_{k+1}=\frac{F''(\xi_k)}{2F'(x_k)}\,e_k^2 .$$
-So $e_{k+1}/e_k^2\to F''(x^{*})/(2F'(x^{*}))$. For $x^2-2$ this limit is $2/(2\cdot2\sqrt2)=0.3536$, and the notebook finds the ratios $0.3333,\ 0.3529,\ 0.3535$. $\square$ -->
+So $e_{k+1}/e_k^2\to F''(x^{\ast})/(2F'(x^{\ast}))$. For $x^2-2$ this limit is $2/(2\cdot2\sqrt2)=0.3536$, and the notebook finds the ratios $0.3333,\ 0.3529,\ 0.3535$. $\square$ -->
 
-**Conditions for local convergence.** $F'(x^{*})\neq0$ (otherwise we divide by something small), $F''$ bounded near $x^{*}$, and $x_0$ close enough to $x^{*}$.
+**Conditions for local convergence.** $F'(x^{\ast})\neq0$ (otherwise we divide by something small), $F''$ bounded near $x^{\ast}$, and $x_0$ close enough to $x^{\ast}$.
 
 ![Newton in 1D](figures/fig01_newton_root_1d.png)
 
@@ -102,7 +102,7 @@ So $e_{k+1}/e_k^2\to F''(x^{*})/(2F'(x^{*}))$. For $x^2-2$ this limit is $2/(2\c
 
 <details><summary><b>Check yourself</b></summary>
 
-1. *Why does Newton for $F(x)=x^3$ converge only linearly?* Because $F'(x^{*})=0$ at the root, so the hypothesis of the quadratic-convergence argument fails ($x_{k+1}=\tfrac23x_k$).
+1. *Why does Newton for $F(x)=x^3$ converge only linearly?* Because $F'(x^{\ast})=0$ at the root, so the hypothesis of the quadratic-convergence argument fails ($x_{k+1}=\tfrac23x_k$).
 2. *Why can Newton cycle?* The tangent line is only a local model; far from the root it can point to a place whose own tangent points back.
 </details>
 
@@ -150,10 +150,10 @@ F_n(x)
 \end{pmatrix}.
 $$
 
-We are looking for a point $x^{*}$ at which **all the equations are satisfied simultaneously**:
+We are looking for a point $x^{\ast}$ at which **all the equations are satisfied simultaneously**:
 
 $$
-F_1(x^{*})=F_2(x^{*})=\cdots=F_n(x^{*})=0.
+F_1(x^{\ast})=F_2(x^{\ast})=\cdots=F_n(x^{\ast})=0.
 $$
 
 The principle of Newton's method remains exactly the same:
@@ -490,7 +490,7 @@ We can see that the residual decreases rapidly. After only three Newton updates,
 The approximate solution is:
 
 $$
-\boxed{(x^{*},y^{*})\approx(1.931852,\;0.517638)}
+\boxed{(x^{\ast},y^{\ast})\approx(1.931852,\;0.517638)}
 $$
 
 For this simple example, the exact positive solution can also be obtained algebraically:
@@ -508,9 +508,9 @@ $$
 Hence, in the first quadrant:
 
 $$
-x^{*}=\frac{\sqrt{6}+\sqrt{2}}{2}\approx 1.93185165,
+x^{\ast}=\frac{\sqrt{6}+\sqrt{2}}{2}\approx 1.93185165,
 \qquad
-y^{*}=\frac{\sqrt{6}-\sqrt{2}}{2}\approx 0.51763805.
+y^{\ast}=\frac{\sqrt{6}-\sqrt{2}}{2}\approx 0.51763805.
 $$
 
 
@@ -534,7 +534,7 @@ $$
 At a local minimizer of a differentiable function $f$, the first-order necessary condition is:
 
 $$
-\nabla f(x^{*})=0.
+\nabla f(x^{\ast})=0.
 $$
 
 Points satisfying this condition are called **stationary points**. It is a necessary condition for a minimizer, not a definition of one.
@@ -677,7 +677,7 @@ If the Hessian is indefinite, the stationary point may be a saddle. If it is neg
 Consider the quadratic function:
 
 $$
-f(x)=\frac12(x-x^{*})^TA(x-x^{*}),
+f(x)=\frac12(x-x^{\ast})^TA(x-x^{\ast}),
 $$
 
 where $A$ is symmetric positive definite.
@@ -685,7 +685,7 @@ where $A$ is symmetric positive definite.
 Its gradient is:
 
 $$
-\nabla f(x)=A(x-x^{*}).
+\nabla f(x)=A(x-x^{\ast}).
 $$
 
 Its Hessian is:
@@ -744,7 +744,7 @@ We will use a quadratic function to understand the answer.
 Consider:
 
 $$
-f(x)=\frac12(x-x^{*})^TA(x-x^{*}),
+f(x)=\frac12(x-x^{\ast})^TA(x-x^{\ast}),
 $$
 
 where $A$ is symmetric positive definite.
@@ -752,13 +752,13 @@ where $A$ is symmetric positive definite.
 We know that:
 
 $$
-\nabla f(x)=A(x-x^{*}).
+\nabla f(x)=A(x-x^{\ast}).
 $$
 
 Let:
 
 $$
-e=x-x^{*}.
+e=x-x^{\ast}.
 $$
 
 Then:
@@ -774,7 +774,7 @@ The vector $e$ describes our actual displacement from the minimizer. But the gra
 In other words:
 
 $$
-\underbrace{x-x^{*}}_{\text{actual displacement}}
+\underbrace{x-x^{\ast}}_{\text{actual displacement}}
 \quad\xrightarrow{\ A\ }\quad
 \underbrace{\nabla f(x)}_{\text{gradient}}.
 $$
@@ -799,10 +799,10 @@ $$
 g_0=Ax_0=(10.5,9.5).
 $$
 
-The direction toward the minimizer $x^{*}=0$ is:
+The direction toward the minimizer $x^{\ast}=0$ is:
 
 $$
-d^{*}=x^{*}-x_0=(-0.6,0.4).
+d^{\ast}=x^{\ast}-x_0=(-0.6,0.4).
 $$
 
 Gradient descent chooses the negative gradient direction:
@@ -815,8 +815,8 @@ The angle between these two directions is:
 
 $$
 \cos\theta=
-\frac{d_{GD}^Td^{*}}
-{\|d_{GD}\|\|d^{*}\|}.
+\frac{d_{GD}^Td^{\ast}}
+{\|d_{GD}\|\|d^{\ast}\|}.
 $$
 
 Substituting:
@@ -925,14 +925,14 @@ $$
 p_N
 &=-A^{-1}Ae\\\\
 &=-e\\\\
-&=x^{*}-x.
+&=x^{\ast}-x.
 \end{aligned}
 $$
 
 Therefore:
 
 $$
-\boxed{p_N=x^{*}-x.}
+\boxed{p_N=x^{\ast}-x.}
 $$
 
 Newton recovers the actual direction toward the minimizer.
@@ -991,7 +991,7 @@ $$
 f(x)=\frac12x^TAx,
 $$
 
-with minimizer $x^{*}=0$.
+with minimizer $x^{\ast}=0$.
 
 A gradient descent step gives:
 
@@ -1036,7 +1036,7 @@ $$
 The best fixed step size for the worst-case contraction factor is:
 
 $$
-\alpha^{*}=\frac{2}{\lambda_{\min}+\lambda_{\max}}.
+\alpha^{\ast}=\frac{2}{\lambda_{\min}+\lambda_{\max}}.
 $$
 
 The corresponding worst-case factor is:
@@ -1164,14 +1164,14 @@ In the coordinates $y=H^{1/2}x$, the quadratic level sets become spheres. This a
 
 Newton's method finds stationary points. It does not automatically distinguish minima from maxima or saddle points.
 
-At a stationary point $x^{*}$, the Hessian provides the second-order classification:
+At a stationary point $x^{\ast}$, the Hessian provides the second-order classification:
 
-| Hessian at $x^{*}$ | Classification |
+| Hessian at $x^{\ast}$ | Classification |
 |---|---|
-| $H(x^{*})\succ0$ | Strict local minimum |
-| $H(x^{*})\prec0$ | Strict local maximum |
-| $H(x^{*})$ indefinite | Saddle point |
-| $H(x^{*})\succeq0$ but singular | Inconclusive |
+| $H(x^{\ast})\succ0$ | Strict local minimum |
+| $H(x^{\ast})\prec0$ | Strict local maximum |
+| $H(x^{\ast})$ indefinite | Saddle point |
+| $H(x^{\ast})\succeq0$ but singular | Inconclusive |
 
 Newton jumps to the stationary point of the local quadratic model, whatever its type.
 
@@ -1228,21 +1228,21 @@ This is another reason why an undamped Newton step can be unreliable far from a 
 
 <!-- ### 7.3 Local quadratic convergence
 
-**Theorem.** Let $f$ be $C^2$, $\nabla f(x^{*})=0$, $H(x^{*})\succ0$, and suppose $H$ is Lipschitz continuous near $x^{*}$ with constant $L$. Then, for $x_0$ sufficiently close to $x^{*}$, the Newton iterates converge to $x^{*}$ and:
+**Theorem.** Let $f$ be $C^2$, $\nabla f(x^{\ast})=0$, $H(x^{\ast})\succ0$, and suppose $H$ is Lipschitz continuous near $x^{\ast}$ with constant $L$. Then, for $x_0$ sufficiently close to $x^{\ast}$, the Newton iterates converge to $x^{\ast}$ and:
 
 $$
 \boxed{
-\|x_{k+1}-x^{*}\|
-\leq C\|x_k-x^{*}\|^2.
+\|x_{k+1}-x^{\ast}\|
+\leq C\|x_k-x^{\ast}\|^2.
 }
 $$
 
-**Optional proof.** Let $e_k=x_k-x^{*}$. By the fundamental theorem of calculus:
+**Optional proof.** Let $e_k=x_k-x^{\ast}$. By the fundamental theorem of calculus:
 
 $$
 \nabla f(x_k)
 =
-\int_0^1H(x^{*}+te_k)e_k\,dt.
+\int_0^1H(x^{\ast}+te_k)e_k\,dt.
 $$
 
 Using the Newton update:
@@ -1252,7 +1252,7 @@ e_{k+1}
 =
 H(x_k)^{-1}
 \int_0^1
-\left[H(x_k)-H(x^{*}+te_k)\right]e_k\,dt.
+\left[H(x_k)-H(x^{\ast}+te_k)\right]e_k\,dt.
 $$
 
 Since $H$ is Lipschitz continuous:
@@ -1271,7 +1271,7 @@ $\square$
 
 **What the hypotheses are for.**
 
-- $H(x^{*})\succ0$ keeps the Hessian invertible near the solution.
+- $H(x^{\ast})\succ0$ keeps the Hessian invertible near the solution.
 - Lipschitz continuity of $H$ controls the error of the local quadratic model.
 - "Close enough" is essential: the theorem is **local**.
 
@@ -1292,7 +1292,7 @@ Because $H\equiv A$ is constant, its Lipschitz constant is $L=0$.
 ## 4. Optimization as root finding
 
 At a local minimizer of a differentiable $f$ the first-order necessary condition holds:
-$$\nabla f(x^{*})=0 .$$
+$$\nabla f(x^{\ast})=0 .$$
 Points satisfying it are called **stationary points**. It is a *necessary* condition for a minimizer, not a definition of one. Take $F=\nabla f$. Then
 $$J_F(x)=\nabla^2f(x)=H(x),$$
 the **Hessian is the Jacobian of the gradient**. Newton's root-finding step becomes
@@ -1306,7 +1306,7 @@ Write the gradient descent update as
 $$x_{k+1}=x_k-\alpha\nabla f(x_k)=x_k-\bigl(\tfrac1\alpha I\bigr)^{-1}\nabla f(x_k).$$
 Compare with Newton, $x_{k+1}=x_k-H_k^{-1}\nabla f(x_k)$. Gradient descent is Newton's method where the Jacobian $H_k$ has been replaced by the scalar matrix $\tfrac1\alpha I$. **GD discards all curvature structure.** The next sections show that this is exactly the cause of the zigzag.
 
-**Direct comparison at one point.** At $x_0=(0.6,-0.4)$ we have $g_0=Ax_0=(10.5,\ 9.5)$. The Newton step is $p=-A^{-1}g_0=(-0.6,\ 0.4)=x^{*}-x_0$. The negative gradient makes an angle of **75.8°** with the direction to the minimizer.
+**Direct comparison at one point.** At $x_0=(0.6,-0.4)$ we have $g_0=Ax_0=(10.5,\ 9.5)$. The Newton step is $p=-A^{-1}g_0=(-0.6,\ 0.4)=x^{\ast}-x_0$. The negative gradient makes an angle of **75.8°** with the direction to the minimizer.
 
 ![GD vs Newton direction](figures/fig03_gd_vs_newton_direction.png)
 
@@ -1344,14 +1344,14 @@ Why do the two coincide? Because $\nabla^2f$ is symmetric. For a general $F$ wit
 
 ## 6. Why Newton avoids the zigzag
 
-**Goal.** Answer the question "why does the Newton direction lead to the minimum?" with three independent arguments on the quadratic $f=\tfrac12x^TAx$ (so $x^{*}=0$, and $H=A$).
+**Goal.** Answer the question "why does the Newton direction lead to the minimum?" with three independent arguments on the quadratic $f=\tfrac12x^TAx$ (so $x^{\ast}=0$, and $H=A$).
 
 ### 6.1 The gradient is a distorted error vector
 
-Let $e=x-x^{*}$. Then $\nabla f(x)=A(x-x^{*})=Ae$. The direction we *want* is the one pointing at the minimizer, $-e$. The steepest-descent direction is $-Ae$, the error **after being multiplied by $A$**. These agree only if $A$ is a multiple of $I$ (circular level sets) or $e$ happens to be an eigenvector.
+Let $e=x-x^{\ast}$. Then $\nabla f(x)=A(x-x^{\ast})=Ae$. The direction we *want* is the one pointing at the minimizer, $-e$. The steepest-descent direction is $-Ae$, the error **after being multiplied by $A$**. These agree only if $A$ is a multiple of $I$ (circular level sets) or $e$ happens to be an eigenvector.
 
 Newton applies $A^{-1}$ to undo the distortion:
-$$p=-A^{-1}\nabla f(x)=-A^{-1}Ae=-e=x^{*}-x.$$
+$$p=-A^{-1}\nabla f(x)=-A^{-1}Ae=-e=x^{\ast}-x.$$
 **On a quadratic, the Newton step is exactly the vector from the current point to the minimizer.** This is the cleanest answer, and the Taylor argument is a consequence of it.
 
 ### 6.2 The eigenmode picture (the source of the zigzag)
@@ -1392,9 +1392,9 @@ In the coordinates $y=H^{1/2}x$ the level sets become spheres, where gradient de
 
 **Goal.** Know exactly what Newton guarantees and what it does not.
 
-At a stationary point $x^{*}$:
+At a stationary point $x^{\ast}$:
 
-| $H(x^{*})$ | Classification |
+| $H(x^{\ast})$ | Classification |
 |---|---|
 | $\succ0$ | strict local minimum |
 | $\prec0$ | strict local maximum |
@@ -1424,13 +1424,13 @@ If $H_k$ is singular, $H_kp=-g_k$ may have no solution or infinitely many. If $\
 
 ### 7.3 Local quadratic convergence
 
-**Theorem.** Let $f$ be $C^2$, $\nabla f(x^{*})=0$, $H(x^{*})\succ0$ and $H$ Lipschitz near $x^{*}$ with constant $L$. Then for $x_0$ close enough to $x^{*}$ the Newton iterates converge to $x^{*}$ and
-$$\lVert x_{k+1}-x^{*}\rVert\le C\lVert x_k-x^{*}\rVert^2 .$$
-*(Optional proof.)* With $e_k=x_k-x^{*}$ and $\nabla f(x_k)=\int_0^1H(x^{*}+te_k)e_k\,dt$,
-$$e_{k+1}=H(x_k)^{-1}\int_0^1\bigl[H(x_k)-H(x^{*}+te_k)\bigr]e_k\,dt,\qquad \lVert e_{k+1}\rVert\le\tfrac L2\lVert H(x_k)^{-1}\rVert\lVert e_k\rVert^2 .$$
+**Theorem.** Let $f$ be $C^2$, $\nabla f(x^{\ast})=0$, $H(x^{\ast})\succ0$ and $H$ Lipschitz near $x^{\ast}$ with constant $L$. Then for $x_0$ close enough to $x^{\ast}$ the Newton iterates converge to $x^{\ast}$ and
+$$\lVert x_{k+1}-x^{\ast}\rVert\le C\lVert x_k-x^{\ast}\rVert^2 .$$
+*(Optional proof.)* With $e_k=x_k-x^{\ast}$ and $\nabla f(x_k)=\int_0^1H(x^{\ast}+te_k)e_k\,dt$,
+$$e_{k+1}=H(x_k)^{-1}\int_0^1\bigl[H(x_k)-H(x^{\ast}+te_k)\bigr]e_k\,dt,\qquad \lVert e_{k+1}\rVert\le\tfrac L2\lVert H(x_k)^{-1}\rVert\lVert e_k\rVert^2 .$$
 This is the root-finding proof of §2 applied to $F=\nabla f$. $\square$
 
-**What the hypotheses are for.** $H(x^{*})\succ0$ keeps $H$ invertible near the solution. Lipschitz $H$ controls the model error. "Close enough" is essential: the theorem is **local**. Part III is about what happens outside.
+**What the hypotheses are for.** $H(x^{\ast})\succ0$ keeps $H$ invertible near the solution. Lipschitz $H$ controls the model error. "Close enough" is essential: the theorem is **local**. Part III is about what happens outside.
 
 <details><summary><b>Check yourself</b></summary>
 
@@ -1448,7 +1448,7 @@ This is the root-finding proof of §2 applied to $F=\nabla f$. $\square$
 
 The Newton step minimizes the **model**. That tells us nothing about how well the model approximates $f$ at distance $\lVert p\rVert$.
 
-**The counterexample.** $f(x)=\sqrt{1+x^2}$ is smooth, strictly convex ($f''>0$ everywhere) with unique minimizer $x^{*}=0$.
+**The counterexample.** $f(x)=\sqrt{1+x^2}$ is smooth, strictly convex ($f''>0$ everywhere) with unique minimizer $x^{\ast}=0$.
 $$f'(x)=\frac{x}{\sqrt{1+x^2}},\qquad f''(x)=\frac1{(1+x^2)^{3/2}} .$$
 The Newton step is
 $$p=-\frac{f'}{f''}=-x(1+x^2),\qquad\boxed{x_{k+1}=-x_k^3}$$
@@ -1515,7 +1515,7 @@ The new point is $x_1=3-30/8=-0.75$, inside the region $|x|<1$ where pure Newton
 $$\cos\theta_k=\frac{g_k^TH_k^{-1}g_k}{\lVert g_k\rVert\lVert H_k^{-1}g_k\rVert}\ge\frac{1/M}{1/m}=\frac mM,$$
 because $g^TH^{-1}g\ge\lVert g\rVert^2/M$ and $\lVert H^{-1}g\rVert\le\lVert g\rVert/m$. So the Newton direction stays uniformly away from orthogonal to $-g_k$, and Zoutendijk's theorem gives $\lVert g_k\rVert\to0$. The guarantee degrades as $\kappa(H)$ grows.
 
-**Keeping the fast local rate.** Near a minimizer with $H(x^{*})\succ0$, the full step $\alpha=1$ satisfies Armijo eventually if $c_1<\tfrac12$ (on an exact quadratic, $f(x+p)-f(x)=\tfrac12g^Tp$, so Armijo with $\alpha=1$ needs $c_1\le\tfrac12$). Damped Newton then becomes pure Newton and keeps quadratic convergence.
+**Keeping the fast local rate.** Near a minimizer with $H(x^{\ast})\succ0$, the full step $\alpha=1$ satisfies Armijo eventually if $c_1<\tfrac12$ (on an exact quadratic, $f(x+p)-f(x)=\tfrac12g^Tp$, so Armijo with $\alpha=1$ needs $c_1\le\tfrac12$). Damped Newton then becomes pure Newton and keeps quadratic convergence.
 
 **The limitation.** Damping needs a descent direction. It cannot repair $H_k$ indefinite or singular. For that we must change the direction.
 
@@ -1696,11 +1696,11 @@ $B_k$ is the Hessian (or an approximation), $\Delta_k$ the **trust-region radius
 
 ### 11.2 The solution is a Hessian modification
 
-**Theorem.** $p^{*}$ with $\lVert p^{*}\rVert\le\Delta$ is a global solution iff there is $\lambda\ge0$ such that
-$$(B+\lambda I)p^{*}=-g,\qquad \lambda(\Delta-\lVert p^{*}\rVert)=0,\qquad B+\lambda I\succeq0 .$$
+**Theorem.** $p^{\ast}$ with $\lVert p^{\ast}\rVert\le\Delta$ is a global solution iff there is $\lambda\ge0$ such that
+$$(B+\lambda I)p^{\ast}=-g,\qquad \lambda(\Delta-\lVert p^{\ast}\rVert)=0,\qquad B+\lambda I\succeq0 .$$
 (These are the Lagrange/KKT conditions of the constrained problem.)
 
-- **Interior solution:** $\lambda=0$, $Bp^{*}=-g$: the Newton step (when $B\succ0$).
+- **Interior solution:** $\lambda=0$, $Bp^{\ast}=-g$: the Newton step (when $B\succ0$).
 - **Boundary solution:** $\lambda\ge0$ is the multiplier, found from $\lVert p(\lambda)\rVert=\Delta$.
 
 This is **exactly the Hessian modification of §10**, but now $\lambda$ is not a trial shift: it is determined by the radius $\Delta$. Large $\Delta$ gives small $\lambda$ (Newton-like). Small $\Delta$ gives large $\lambda$ (gradient-like). Since $\lVert p(\lambda)\rVert$ is decreasing in $\lambda$ (§10.2), the equation $\lVert p(\lambda)\rVert=\Delta$ is a scalar root-finding problem (solved by Newton's method!).
@@ -1973,7 +1973,7 @@ for k = 0, 1, ...
 # Final synthesis
 
 1. **Newton root finding:** local linearization turns a nonlinear problem into a sequence of linear ones.
-2. **Newton optimization:** apply it to $\nabla f=0$. The Jacobian is the symmetric Hessian. Gradient descent is the same iteration with the crude Jacobian $\tfrac1\alpha I$, which causes its zigzag: stiff modes overshoot, soft modes crawl. Newton divides each mode by its own curvature, so on a quadratic the step is exactly $x^{*}-x$.
+2. **Newton optimization:** apply it to $\nabla f=0$. The Jacobian is the symmetric Hessian. Gradient descent is the same iteration with the crude Jacobian $\tfrac1\alpha I$, which causes its zigzag: stiff modes overshoot, soft modes crawl. Newton divides each mode by its own curvature, so on a quadratic the step is exactly $x^{\ast}-x$.
 3. **Newton finds stationary points of a local model**, not necessarily minimizers, and the model is only valid nearby.
 4. **Globalization** controls how the Newton step is used: damping (length only), **Hessian modification** $(H+\lambda I)p=-g$ (direction and length, interpolating between Newton and gradient descent), and **trust regions** (the same form of solution, with $\lambda$ set by a radius adapted from the observed ratio $\rho_k$).
 5. **Quasi-Newton for root finding:** the secant condition $B_{k+1}s_k=y_k$ and Broyden's minimal-change update.
