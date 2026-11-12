@@ -14,3 +14,4 @@
      |_______ [TD Newton Method](./Exercises/newton_exercises.md) Exercises on Newton method
 
 ---
+---
