@@ -1,6 +1,6 @@
 # Newton and Quasi-Newton Optimization Methods
 
-*A self-contained lecture. Every number below was produced by the companion notebook `newton-lecture-companion.ipynb`, and every figure is in `figures/`.*
+<!-- *A self-contained lecture. Every number below was produced by the companion notebook `newton-lecture-companion.ipynb`, and every figure is in `figures/`.*
 
 ---
 
@@ -11,7 +11,7 @@
 - **Run the notebook next to the text.** Section numbers match. Cells marked 🔧 *Playground* are meant to be edited.
 - **Time:** about three sessions of 90 minutes (A: Parts 0–II, B: Part III, C: Parts IV–V). Boxes marked *(optional)* can be skipped on a first reading.
 
-**Prerequisites:** gradient and Hessian, Taylor expansion, positive definite matrices and eigenvalues, gradient descent, line search (Armijo backtracking).
+**Prerequisites:** gradient and Hessian, Taylor expansion, positive definite matrices and eigenvalues, gradient descent, line search (Armijo backtracking). -->
 
 **Notation.** $f:\mathbb R^n\to\mathbb R$ is the objective, $g_k=\nabla f(x_k)$, $H_k=\nabla^2f(x_k)$ (symmetric), $p_k$ is the step, $x_{k+1}=x_k+\alpha_kp_k$. For root finding, $F:\mathbb R^n\to\mathbb R^n$ and $J$ is its Jacobian. $\kappa=\lambda_{\max}/\lambda_{\min}$ is the condition number.
 
@@ -436,8 +436,7 @@ $$
 \begin{pmatrix}
 p_1\\\\
 p_2
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 -0.64\\\\
 -0.60
@@ -1006,8 +1005,7 @@ In the eigenvector coordinates, each component evolves independently:
 
 $$
 \boxed{
-c_i^{(k+1)}
-=
+c_i^{(k+1)} =
 (1-\alpha\lambda_i)c_i^{(k)}.
 }
 $$
