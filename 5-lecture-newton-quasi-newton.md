@@ -1965,7 +1965,7 @@ for k = 0, 1, ...
 
 ---
 
-# Final synthesis
+<!-- # Final synthesis
 
 1. **Newton root finding:** local linearization turns a nonlinear problem into a sequence of linear ones.
 2. **Newton optimization:** apply it to $\nabla f=0$. The Jacobian is the symmetric Hessian. Gradient descent is the same iteration with the crude Jacobian $\tfrac1\alpha I$, which causes its zigzag: stiff modes overshoot, soft modes crawl. Newton divides each mode by its own curvature, so on a quadratic the step is exactly $x^{\ast}-x$.
@@ -2001,4 +2001,4 @@ for k = 0, 1, ...
 | B | §8–9 (compressed), **§10 Hessian modification**, §11–12 | 90 min |
 | C | Parts IV–V (§13–18) and synthesis | 90 min |
 
-**Optional material that can move to a handout:** §6.3 (Hessian metric), the proof in §7.3, modified Cholesky details (§10.5), Cauchy point and dogleg (§11.3), L-BFGS (§18).
+**Optional material that can move to a handout:** §6.3 (Hessian metric), the proof in §7.3, modified Cholesky details (§10.5), Cauchy point and dogleg (§11.3), L-BFGS (§18). -->
