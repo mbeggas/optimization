@@ -153,7 +153,7 @@ $$
 We are looking for a point $x^*$ at which **all the equations are satisfied simultaneously**:
 
 $$
-F_1(x^*)=F_2(x^*)=\cdots=F_n(x^*)=0.
+F_1(x^{*})=F_2(x^{*})=\cdots=F_n(x^{*})=0.
 $$
 
 The principle of Newton's method remains exactly the same:
