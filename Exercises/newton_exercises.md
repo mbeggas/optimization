@@ -59,15 +59,15 @@ $$
 
 2. Consider an arbitrary nonzero direction $d=(a,b)^T$ and the one-dimensional restriction
 
-   $$
-   \phi(t)=f(\mathbf{x}+td).
-   $$
+$$
+\phi(t)=f(\mathbf{x}+td).
+$$
 
    Show that
 
-   $$
-   \phi''(0)=d^TAd.
-   $$
+$$
+\phi''(0)=d^TAd.
+$$
 
    Explain the geometric meaning of this quantity.
 
