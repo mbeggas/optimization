@@ -378,10 +378,8 @@ y_k & x_k
 \begin{pmatrix}
 p_1\\\\
 p_2
-\end{pmatrix}
-=
--
-\begin{pmatrix}
+\end{pmatrix}=
+-\begin{pmatrix}
 x_k^2+y_k^2-4\\\\
 x_ky_k-1
 \end{pmatrix}.
@@ -411,8 +409,7 @@ F(2,0.8)=
 \begin{pmatrix}
 2^2+0.8^2-4\\\\
 2(0.8)-1
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 0.64\\\\
 0.60
@@ -1193,7 +1190,7 @@ $$
 **Example.** For $f=x^2-y^2$ at $(1,2)$:
 
 $$
-g=(2,-4),\qquad H=\operatorname{diag}(2,-2).
+g=(2,-4),\qquad H=\mathrm{diag}(2,-2).
 $$
 
 The Newton step is:
