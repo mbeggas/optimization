@@ -34,7 +34,7 @@
 
 We use a **rotated** ellipse, so that nothing can be explained away as "just rescale the coordinates":
 
-$$f(x)=\tfrac12x^TAx,\qquad A=\begin{pmatrix}50.5&49.5\\49.5&50.5\end{pmatrix}.$$
+$$f(x)=\tfrac12x^TAx,\qquad A=\begin{pmatrix}50.5&49.5\\\\49.5&50.5\end{pmatrix}.$$
 
 Its eigenvalues are $1$ (eigenvector $(1,-1)/\sqrt2$) and $100$ (eigenvector $(1,1)/\sqrt2$), so $\kappa=100$. The minimizer is $x^*=0$ and the valley runs along $(1,-1)$.
 
@@ -135,17 +135,17 @@ where
 $$
 x=
 \begin{pmatrix}
-x_1\\
-x_2\\
-\vdots\\
+x_1\\\\
+x_2\\\\
+\vdots\\\\
 x_n
 \end{pmatrix},
 \qquad
 F(x)=
 \begin{pmatrix}
-F_1(x)\\
-F_2(x)\\
-\vdots\\
+F_1(x)\\\\
+F_2(x)\\\\
+\vdots\\\\
 F_n(x)
 \end{pmatrix}.
 $$
@@ -180,7 +180,7 @@ J(x)=
 \cdots
 &
 \frac{\partial F_1}{\partial x_n}
-\\
+\\\\
 \frac{\partial F_2}{\partial x_1}
 &
 \frac{\partial F_2}{\partial x_2}
@@ -188,8 +188,8 @@ J(x)=
 \cdots
 &
 \frac{\partial F_2}{\partial x_n}
-\\
-\vdots & \vdots & \ddots & \vdots\\
+\\\\
+\vdots & \vdots & \ddots & \vdots\\\\
 \frac{\partial F_n}{\partial x_1}
 &
 \frac{\partial F_n}{\partial x_2}
@@ -269,12 +269,11 @@ Consider a system with two equations and two unknowns:
 $$
 F(x,y)=
 \begin{pmatrix}
-F_1(x,y)\\
+F_1(x,y)\\\\
 F_2(x,y)
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
-0\\
+0\\\\
 0
 \end{pmatrix}.
 $$
@@ -306,7 +305,7 @@ Consider the following system:
 
 $$
 \begin{cases}
-x^2+y^2-4=0\\
+x^2+y^2-4=0\\\\
 xy-1=0
 \end{cases}
 $$
@@ -330,7 +329,7 @@ Define:
 $$
 F(x,y)=
 \begin{pmatrix}
-x^2+y^2-4\\
+x^2+y^2-4\\\\
 xy-1
 \end{pmatrix}.
 $$
@@ -343,7 +342,7 @@ $$
 J(x,y)=
 \begin{pmatrix}
 \frac{\partial F_1}{\partial x} &
-\frac{\partial F_1}{\partial y}\\
+\frac{\partial F_1}{\partial y}\\\\
 \frac{\partial F_2}{\partial x} &
 \frac{\partial F_2}{\partial y}
 \end{pmatrix}.
@@ -355,7 +354,7 @@ $$
 \boxed{
 J(x,y)=
 \begin{pmatrix}
-2x & 2y\\
+2x & 2y\\\\
 y & x
 \end{pmatrix}
 }
@@ -373,17 +372,17 @@ The Newton correction is obtained by solving:
 
 $$
 \begin{pmatrix}
-2x_k & 2y_k\\
+2x_k & 2y_k\\\\
 y_k & x_k
 \end{pmatrix}
 \begin{pmatrix}
-p_1\\
+p_1\\\\
 p_2
 \end{pmatrix}
 =
 -
 \begin{pmatrix}
-x_k^2+y_k^2-4\\
+x_k^2+y_k^2-4\\\\
 x_ky_k-1
 \end{pmatrix}.
 $$
@@ -392,7 +391,7 @@ After solving this system, we update:
 
 $$
 \begin{cases}
-x_{k+1}=x_k+p_1\\
+x_{k+1}=x_k+p_1\\\\
 y_{k+1}=y_k+p_2
 \end{cases}
 $$
@@ -410,12 +409,12 @@ First, evaluate the function:
 $$
 F(2,0.8)=
 \begin{pmatrix}
-2^2+0.8^2-4\\
+2^2+0.8^2-4\\\\
 2(0.8)-1
 \end{pmatrix}
 =
 \begin{pmatrix}
-0.64\\
+0.64\\\\
 0.60
 \end{pmatrix}.
 $$
@@ -425,7 +424,7 @@ Next, evaluate the Jacobian:
 $$
 J(2,0.8)=
 \begin{pmatrix}
-4 & 1.6\\
+4 & 1.6\\\\
 0.8 & 2
 \end{pmatrix}.
 $$
@@ -434,16 +433,16 @@ The Newton system is:
 
 $$
 \begin{pmatrix}
-4 & 1.6\\
+4 & 1.6\\\\
 0.8 & 2
 \end{pmatrix}
 \begin{pmatrix}
-p_1\\
+p_1\\\\
 p_2
 \end{pmatrix}
 =
 \begin{pmatrix}
--0.64\\
+-0.64\\\\
 -0.60
 \end{pmatrix}.
 $$
@@ -453,7 +452,7 @@ Solving this system gives:
 $$
 p=
 \begin{pmatrix}
--0.047619\\
+-0.047619\\\\
 -0.280952
 \end{pmatrix}.
 $$
@@ -462,7 +461,7 @@ Therefore:
 
 $$
 \begin{aligned}
-x_1&=2-0.047619=1.952381,\\
+x_1&=2-0.047619=1.952381,\\\\
 y_1&=0.8-0.280952=0.519048.
 \end{aligned}
 $$
@@ -860,7 +859,7 @@ where:
 $$
 \Lambda=
 \begin{pmatrix}
-\lambda_1&0\\
+\lambda_1&0\\\\
 0&\lambda_2
 \end{pmatrix}.
 $$
@@ -924,8 +923,8 @@ Substituting $g=Ae$:
 $$
 \begin{aligned}
 p_N
-&=-A^{-1}Ae\\
-&=-e\\
+&=-A^{-1}Ae\\\\
+&=-e\\\\
 &=x^*-x.
 \end{aligned}
 $$
@@ -946,8 +945,8 @@ A^{-1}g
 &=
 \frac{\lambda_1c_1}{\lambda_1}q_1
 +
-\frac{\lambda_2c_2}{\lambda_2}q_2\\
-&=c_1q_1+c_2q_2\\
+\frac{\lambda_2c_2}{\lambda_2}q_2\\\\
+&=c_1q_1+c_2q_2\\\\
 &=e.
 \end{aligned}
 $$
@@ -1468,10 +1467,10 @@ From $x_0=3$: $3\to-27\to1.97\times10^{4}\to-7.6\times10^{12}$, and $f(3)=3.162$
 **What to look at.** Left: the cobweb of $x\mapsto-x^3$. The green path from $x_0=0.9$ spirals into $0$, and the red path from $x_0=1.05$ spirals out. Right: far from the minimizer $f$ is almost a straight line ($f\approx\lvert x\rvert$), so the model sees tiny curvature and proposes a gigantic step to the vertex of a very wide parabola, far past the minimizer.
 
 $$
-x_1=-(0.9)^3=-0.729,\\
-x_2=-(-0.729)^3\approx0.3874,\\
-x_3\approx-0.0581,\\
-x_4\approx0.000196.\\
+x_1=-(0.9)^3=-0.729,\\\\
+x_2=-(-0.729)^3\approx0.3874,\\\\
+x_3\approx-0.0581,\\\\
+x_4\approx0.000196.\\\\
 $$
 
 The sequence alternates between positive and negative values, but its magnitude decreases:
@@ -1642,7 +1641,7 @@ solve (H + tau*I) p = -g
 ```
 4. *(mention only)* Modified Cholesky (Gill–Murray, Schnabel–Eskow) perturbs the diagonal during the factorization.
 
-**Numbers for $H=\begin{pmatrix}3&2\\2&-1\end{pmatrix}$, $g=(1,1)$** (eigenvalues $-1.828$ and $3.828$):
+**Numbers for $H=\begin{pmatrix}3&2\\\\2&-1\end{pmatrix}$, $g=(1,1)$** (eigenvalues $-1.828$ and $3.828$):
 
 | Method | Result |
 |---|---|
@@ -1711,7 +1710,7 @@ This is **exactly the Hessian modification of §10**, but now $\lambda$ is not a
 ### 11.3 Cheap approximate solutions
 
 **Cauchy point** (minimize $m$ along $-g$ within the ball):
-$$p^C=-\tau\frac{\Delta}{\lVert g\rVert}g,\quad \tau=\begin{cases}1&g^TBg\le0\\\min\!\bigl(\lVert g\rVert^3/(\Delta\,g^TBg),\,1\bigr)&g^TBg>0\end{cases}$$
+$$p^C=-\tau\frac{\Delta}{\lVert g\rVert}g,\quad \tau=\begin{cases}1&g^TBg\le0\\\\\min\!\bigl(\lVert g\rVert^3/(\Delta\,g^TBg),\,1\bigr)&g^TBg>0\end{cases}$$
 It guarantees $m(0)-m(p^C)\ge\tfrac12\lVert g\rVert\min(\Delta,\lVert g\rVert/\lVert B\rVert)$, the trust-region analogue of sufficient decrease.
 
 **Dogleg** (for $B\succ0$): follow the path $0\to p^U\to p^B$ with $p^U=-\frac{g^Tg}{g^TBg}g$ and $p^B=-B^{-1}g$, and stop where it leaves the ball. Along the path $\lVert p\rVert$ increases and $m$ decreases.
@@ -1927,7 +1926,7 @@ for k = 0, 1, ...
     W_{k+1} = (I - σ s y^T) W_k (I - σ y s^T) + σ s s^T,   σ = 1/(y^T s)
 ```
 
-**Experiment 1: BFGS on the ellipse with exact line search.** $\lVert g\rVert$ per step: $14.2\to0.70\to3.9\times10^{-15}$: **two steps** (= $n$). The final $W$ equals $A^{-1}=\begin{pmatrix}0.505&-0.495\\-0.495&0.505\end{pmatrix}$ exactly: BFGS has *learned the inverse Hessian* from two secant pairs. (On quadratics with exact line search BFGS terminates in at most $n$ steps.)
+**Experiment 1: BFGS on the ellipse with exact line search.** $\lVert g\rVert$ per step: $14.2\to0.70\to3.9\times10^{-15}$: **two steps** (= $n$). The final $W$ equals $A^{-1}=\begin{pmatrix}0.505&-0.495\\\\-0.495&0.505\end{pmatrix}$ exactly: BFGS has *learned the inverse Hessian* from two secant pairs. (On quadratics with exact line search BFGS terminates in at most $n$ steps.)
 
 **Experiment 2: Rosenbrock** $f=100(y-x^2)^2+(1-x)^2$ from $(-1.2,1)$. BFGS converges in 35 iterations. Along the way: the secant residual $\lVert B_{k+1}s_k-y_k\rVert\le5\times10^{-12}$, $y_k^Ts_k>0$ at every step, and the smallest eigenvalue of $W_k$ was $4.6\times10^{-4}>0$.
 
