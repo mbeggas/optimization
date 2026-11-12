@@ -13,3 +13,4 @@
 [Lecture 05:](./5-lecture-newton-quasi-newton.md) Newton and Quasi-Newton Optimization Methods  
      |_______ [TD Newton Method](./Exercises/newton_exercises.md) Exercises on Newton method
 
+---
